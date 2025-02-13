@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Android Spline Embed</title>
+    <title>Embedded Spline Model with Button</title>
     <style>
         body, html {
             margin: 0;
@@ -12,33 +12,91 @@
             height: 100%;
             overflow: hidden;
             background-color: black; /* Black Background */
+            font-family: Arial, sans-serif; /* Adding font for better text appearance */
         }
+
         iframe {
             display: block;
             width: 100%;
             height: 100vh;
             border: none;
         }
+
+        /* Button Styling */
+        .top-center-button {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 25px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: background 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+        }
+
+        .top-center-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive button for mobile devices */
+        @media (max-width: 600px) {
+            .top-center-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
+
+        /* Cover the bottom-right corner */
+        .iframe-logo-cover {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 250px;
+            height: 120px;
+            background-color: black;
+            z-index: 1100;
+        }
+
+        /* Ensure better responsiveness for small screens */
+        @media (max-width: 768px) {
+            iframe {
+                height: 80vh; /* Adjust iframe height for smaller devices */
+            }
+
+            .iframe-logo-cover {
+                width: 200px; /* Adjust width for better fit on mobile */
+                height: 100px;
+            }
+
+            .top-center-button {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Centered Blue Button Outside the iframe -->
+    <button class="top-center-button" onclick="window.location.href='https://sites.google.com/view/blendoptimum3d/home'">
+        Go to Blend Optimum 3D
+    </button>
+
+    <!-- Cover the "Made by Spline" logo in the bottom-right corner -->
+    <div class="iframe-logo-cover"></div>
+
     <!-- Embedded Spline Model -->
-    <iframe src="https://my.spline.design/robotfollowcursorforlandingpage-a9670497cf273c4e2de2a6f1382f078f/" frameborder="0" width="100%" height="100%"></iframe>
-
-    <script>
-        // Function to detect if the device is Android
-        function isAndroid() {
-            const userAgent = navigator.userAgent.toLowerCase();
-            return /android/i.test(userAgent); // Detects Android devices
-        }
-
-        // Check if the user is on an Android device
-        if (!isAndroid()) {
-            // Optionally, you can add a message or embed another content for non-Android devices
-            document.body.innerHTML = "<h1>Sorry, this content is available only for Android devices.</h1>";
-        }
-    </script>
+    <iframe src="https://my.spline.design/robotfollowcursorforlandingpage-a9670497cf273c4e2de2a6f1382f078f/" 
+            frameborder="0" 
+            width="100%" 
+            height="100%">
+    </iframe>
 
 </body>
 </html>
