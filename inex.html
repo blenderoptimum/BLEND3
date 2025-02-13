@@ -23,8 +23,8 @@
 </head>
 <body>
 
-    <!-- Embedded Spline Model for Android -->
-    <iframe id="splineEmbed" src="" frameborder="0" width="100%" height="100%"></iframe>
+    <!-- Embedded Spline Model -->
+    <iframe id="splineEmbed" src="https://my.spline.design/robotfollowcursorforlandingpage-a9670497cf273c4e2de2a6f1382f078f/" frameborder="0" width="100%" height="100%"></iframe>
 
     <script>
         // Function to detect if the device is Android
@@ -34,10 +34,7 @@
         }
 
         // Check if the user is on an Android device
-        if (isAndroid()) {
-            // If the user is on an Android phone, embed the specific Spline model
-            document.getElementById('splineEmbed').src = "https://build.spline.design/g9GakAcjMMpCYLie5p3b/scene.splinecontent";
-        } else {
+        if (!isAndroid()) {
             // Optionally, you can add a message or embed another content for non-Android devices
             document.body.innerHTML = "<h1>Sorry, this content is available only for Android devices.</h1>";
         }
