@@ -11,8 +11,7 @@
             width: 100%;
             height: 100%;
             overflow: hidden;
-            background-color: black; /* Black Background */
-            font-family: Arial, sans-serif; /* Adding font for better text appearance */
+            background-color: black;
         }
 
         iframe {
@@ -28,7 +27,7 @@
             top: 20px;
             left: 50%;
             transform: translateX(-50%);
-            padding: 12px 25px;
+            padding: 15px 30px;
             background-color: #007BFF;
             color: white;
             border: none;
@@ -37,18 +36,17 @@
             cursor: pointer;
             z-index: 1000;
             transition: background 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
         }
 
         .top-center-button:hover {
             background-color: #0056b3;
         }
 
-        /* Responsive button for mobile devices */
-        @media (max-width: 600px) {
+        /* Responsive Button on Mobile */
+        @media (max-width: 768px) {
             .top-center-button {
+                padding: 12px 20px;
                 font-size: 16px;
-                padding: 10px 20px;
             }
         }
 
@@ -63,20 +61,15 @@
             z-index: 1100;
         }
 
-        /* Ensure better responsiveness for small screens */
+        /* Adjustments for small screen sizes */
         @media (max-width: 768px) {
             iframe {
-                height: 80vh; /* Adjust iframe height for smaller devices */
+                height: 70vh; /* Reduced height for better screen fitting on mobile */
             }
 
             .iframe-logo-cover {
-                width: 200px; /* Adjust width for better fit on mobile */
+                width: 200px;
                 height: 100px;
-            }
-
-            .top-center-button {
-                font-size: 16px;
-                padding: 10px 20px;
             }
         }
     </style>
