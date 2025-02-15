@@ -3,93 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Spline Model with Button</title>
+    <title>Full Screen Spline</title>
     <style>
-        body, html {
+        * {
             margin: 0;
             padding: 0;
+            border: 0;
+            overflow: hidden;
+        }
+        html, body {
             width: 100%;
             height: 100%;
-            overflow: hidden;
-            background-color: black;
         }
-
         iframe {
-            display: block;
-            width: 100%;
+            width: 100vw;
             height: 100vh;
-            border: none;
-        }
-
-        /* Button Styling */
-        .top-center-button {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px 30px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-            cursor: pointer;
-            z-index: 1000;
-            transition: background 0.3s ease;
-        }
-
-        .top-center-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Responsive Button on Mobile */
-        @media (max-width: 768px) {
-            .top-center-button {
-                padding: 12px 20px;
-                font-size: 16px;
-            }
-        }
-
-        /* Cover the bottom-right corner */
-        .iframe-logo-cover {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            width: 250px;
-            height: 120px;
-            background-color: black;
-            z-index: 1100;
-        }
-
-        /* Adjustments for small screen sizes */
-        @media (max-width: 768px) {
-            iframe {
-                height: 70vh; /* Reduced height for better screen fitting on mobile */
-            }
-
-            .iframe-logo-cover {
-                width: 200px;
-                height: 100px;
-            }
+            display: block;
         }
     </style>
 </head>
 <body>
-
-    <!-- Centered Blue Button Outside the iframe -->
-    <button class="top-center-button" onclick="window.location.href='https://sites.google.com/view/blendoptimum3d/home'">
-        Go to Blend Optimum 3D
-    </button>
-
-    <!-- Cover the "Made by Spline" logo in the bottom-right corner -->
-    <div class="iframe-logo-cover"></div>
-
-    <!-- Embedded Spline Model -->
-    <iframe src="https://my.spline.design/robotfollowcursorforlandingpage-a9670497cf273c4e2de2a6f1382f078f/" 
-            frameborder="0" 
-            width="100%" 
-            height="100%">
-    </iframe>
-
+    <iframe src="https://my.spline.design/monsterdrink-96bff93f807e7dfe7c0d7e32c318683e/" frameborder="0"></iframe>
 </body>
 </html>
